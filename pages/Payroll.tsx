@@ -1,6 +1,7 @@
 
+
 import React, { useState, useEffect, useMemo } from 'react';
-import { MOCK_PAYROLL_RUNS, MOCK_EMPLOYEES } from '../constants';
+import { MOCK_PAYROLL_RUNS, MOCK_EMPLOYEES, SHARED_EXCHANGE_RATES } from '../constants';
 import { PayrollStatus, PayrollRun } from '../types';
 import { 
   Calendar, CheckCircle2, AlertCircle, Clock, Download, ChevronRight, X, 
@@ -11,45 +12,8 @@ import {
 import { useLanguage } from '../contexts/LanguageContext';
 import BankCalendar from '../components/BankCalendar';
 
-// Mock Exchange Rates (Base: 1 Unit = X USD)
-// Expanded list to simulate ~100 currencies for search functionality demo
-const EXCHANGE_RATES: Record<string, number> = {
-  'USD': 1.0,
-  'EUR': 1.08,
-  'GBP': 1.27,
-  'SGD': 0.74,
-  'JPY': 0.0067,
-  'CNY': 0.138,
-  'HKD': 0.128,
-  'AUD': 0.65,
-  'CAD': 0.73,
-  'CHF': 1.10,
-  'INR': 0.012,
-  'BRL': 0.20,
-  'ZAR': 0.053,
-  'MXN': 0.058,
-  'SEK': 0.096,
-  'NZD': 0.61,
-  'KRW': 0.00075,
-  'AED': 0.27, 
-  'AFN': 0.014, 
-  'ALL': 0.011, 
-  'AMD': 0.0025, 
-  'ANG': 0.56,
-  'AOA': 0.0012, 
-  'ARS': 0.0012, 
-  'AWG': 0.56, 
-  'AZN': 0.59, 
-  'BAM': 0.55,
-  'BBD': 0.50, 
-  'BDT': 0.0091, 
-  'BGN': 0.55, 
-  'BHD': 2.65, 
-  'BIF': 0.00035,
-  'USDT': 1.0,    // Crypto for Payment
-  'BTC': 65000.0, // Crypto for Payment
-  'ETH': 3500.0   // Crypto for Payment
-};
+// Mock Exchange Rates: Using centralized constants now
+const EXCHANGE_RATES = SHARED_EXCHANGE_RATES;
 
 interface PayrollAdjustment {
   amount: number; // Local Currency Amount

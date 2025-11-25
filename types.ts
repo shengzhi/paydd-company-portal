@@ -1,4 +1,5 @@
 
+
 export enum EmployeeStatus {
   ACTIVE = 'Active',
   ONBOARDING = 'Onboarding',
@@ -28,6 +29,15 @@ export interface Employee {
   beneficiaries: Beneficiary[];
   dob?: string;
   tags?: string[];
+  employmentType: 'Regular' | 'Contractor';
+}
+
+export interface Tag {
+  id: string;
+  name: string;
+  description: string;
+  color: 'indigo' | 'green' | 'blue' | 'amber' | 'red' | 'purple' | 'pink' | 'slate';
+  createdAt: string;
 }
 
 export enum PayrollStatus {
@@ -46,6 +56,35 @@ export interface PayrollRun {
   status: PayrollStatus;
   dueDate: string;
 }
+
+// --- NEW EXPENSE TYPES ---
+export type ExpenseCategory = 'Travel' | 'Meals' | 'Accommodation' | 'Office' | 'Training' | 'Other';
+
+export interface ExpenseItem {
+  id: string;
+  employeeId: string;
+  employeeName: string; // Denormalized for ease
+  beneficiaryId?: string;
+  beneficiaryName?: string;
+  date: string;
+  category: ExpenseCategory;
+  description: string;
+  amount: number;
+  currency: string;
+  attachment?: string; // Mock URL
+  exchangeRate: number; // Rate at time of entry
+  amountUSD: number;
+}
+
+export interface ExpenseBatch {
+  id: string;
+  date: string;
+  totalItems: number;
+  totalAmountUSD: number;
+  status: 'Draft' | 'Processing' | 'Paid';
+  items: ExpenseItem[];
+}
+// -------------------------
 
 export interface ChartData {
   name: string;

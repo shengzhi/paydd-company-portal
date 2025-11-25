@@ -1,11 +1,12 @@
 
+
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 export type Language = 'en' | 'zh-CN' | 'zh-TW' | 'ru';
 
 export const translations = {
   en: {
-    // Navigation Groups
+    // ... existing translations ...
     groupEnterprise: 'Enterprise',
     groupWorkforce: 'Workforce',
     groupFinancials: 'Financials',
@@ -27,6 +28,43 @@ export const translations = {
     
     securitySettings: 'Security Settings',
     logout: 'Log out',
+    
+    // Expenses
+    expensesOverview: 'Manage employee reimbursements and claims.',
+    newExpense: 'New Reimbursement',
+    totalReimbursed: 'Total Reimbursed (YTD)',
+    totalReimbursedCount: 'Total Paid Claims',
+    pendingApproval: 'Pending Approval',
+    batchId: 'Batch ID',
+    totalItems: 'Items',
+    totalAmount: 'Total Amount',
+    
+    // Expense Wizard
+    stepAddItems: '1. Add Expenses',
+    stepReviewExpenses: '2. Review Batch',
+    stepPayExpenses: '3. Payment',
+    
+    expenseCategory: 'Category',
+    expenseDate: 'Date',
+    expenseDesc: 'Description',
+    expenseAmount: 'Amount',
+    expenseCurrency: 'Currency',
+    expenseAttachment: 'Receipt / Attachment',
+    uploadReceipt: 'Upload Receipt',
+    dragDrop: 'Drag & drop or click to upload',
+    addItem: 'Add Item',
+    noItemsAdded: 'No expense items added yet.',
+    selectBankAccount: 'Select Bank Account',
+    searchEmployee: 'Search Employee...',
+    exchangeRateDisplay: 'Exchange Rate',
+    convertedAmount: 'Converted Amount',
+    
+    catTravel: 'Travel',
+    catMeals: 'Meals',
+    catAccommodation: 'Accommodation',
+    catOffice: 'Office Supplies',
+    catTraining: 'Training',
+    catOther: 'Other',
 
     // Login Page
     loginTitle: 'Log in to PayDD',
@@ -78,11 +116,27 @@ export const translations = {
     salary: 'Salary',
     actions: 'Actions',
     monthlyGross: 'Monthly Gross',
+    typeRegular: 'Regular Employee',
+    typeContractor: 'Contractor',
+    salaryAmount: 'Salary Amount',
+    
+    // Employee Actions
+    offboard: 'Offboard',
+    employeeDetails: 'Employee Details',
+    offboardingWizard: 'Offboarding Wizard',
+    lastWorkingDay: 'Last Working Day',
+    reasonForLeaving: 'Reason for Leaving',
+    confirmOffboard: 'Confirm Offboarding',
+    resignation: 'Resignation',
+    termination: 'Termination',
+    contractExpiry: 'Contract Expiry',
+    cancel: 'Cancel',
 
     // Add Employee Wizard
     stepBasicInfo: 'Employee Info',
     stepContract: 'Contract',
     stepBank: 'Bank Info',
+    stepSalaryBank: 'Salary & Bank',
     personalDetails: 'Personal Details',
     employmentDetails: 'Employment Details',
     firstName: 'First Name',
@@ -126,6 +180,18 @@ export const translations = {
     contractBetween: 'Employment Contract between',
     and: 'and',
     contractDate: 'Contract Date',
+    
+    // Tags
+    tagsOverview: 'Organize your workforce with custom tags and groups.',
+    createTag: 'Create Tag',
+    editTag: 'Edit Tag',
+    tagName: 'Tag Name',
+    tagColor: 'Tag Color',
+    tagDesc: 'Description',
+    tagMembers: 'Members',
+    taggedEmployees: 'Employees tagged with',
+    noTagsFound: 'No tags found',
+    deleteTagConfirm: 'Are you sure you want to delete this tag? This action cannot be undone.',
     
     // Payroll
     reviewPayroll: 'Review and approve payroll runs across all entities.',
@@ -323,8 +389,10 @@ export const translations = {
     
     // Common
     search: 'Search...',
+    headerSlogan: 'Global Payroll & Compliance Platform',
   },
   'zh-CN': {
+    // ... existing translations ...
     groupEnterprise: '企业管理',
     groupWorkforce: '员工管理',
     groupFinancials: '财务服务',
@@ -345,6 +413,43 @@ export const translations = {
     
     securitySettings: '安全设置',
     logout: '退出登录',
+    
+    // Expenses
+    expensesOverview: '管理员工报销和费用申请。',
+    newExpense: '新增报销',
+    totalReimbursed: '已报销总额',
+    totalReimbursedCount: '已报销总笔数',
+    pendingApproval: '待审批',
+    batchId: '批次 ID',
+    totalItems: '条目数',
+    totalAmount: '总金额',
+
+    // Expense Wizard
+    stepAddItems: '1. 添加费用',
+    stepReviewExpenses: '2. 确认批次',
+    stepPayExpenses: '3. 支付',
+
+    expenseCategory: '费用类型',
+    expenseDate: '发生日期',
+    expenseDesc: '费用描述',
+    expenseAmount: '金额',
+    expenseCurrency: '币种',
+    expenseAttachment: '凭证 / 附件',
+    uploadReceipt: '上传凭证',
+    dragDrop: '拖拽或点击上传文件',
+    addItem: '添加费用',
+    noItemsAdded: '暂无费用条目。',
+    selectBankAccount: '选择收款账户',
+    searchEmployee: '搜索员工...',
+    exchangeRateDisplay: '参考汇率',
+    convertedAmount: '折算金额',
+
+    catTravel: '差旅交通',
+    catMeals: '餐饮',
+    catAccommodation: '住宿',
+    catOffice: '办公用品',
+    catTraining: '培训',
+    catOther: '其他',
 
     // Login Page
     loginTitle: '登录 PayDD',
@@ -394,11 +499,27 @@ export const translations = {
     salary: '薪资',
     actions: '操作',
     monthlyGross: '月度总额',
+    typeRegular: '正式员工',
+    typeContractor: '灵活用工',
+    salaryAmount: '薪资金额',
+
+    // Employee Actions
+    offboard: '离职',
+    employeeDetails: '员工详情',
+    offboardingWizard: '离职办理',
+    lastWorkingDay: '最后工作日',
+    reasonForLeaving: '离职原因',
+    confirmOffboard: '确认离职',
+    resignation: '主动辞职',
+    termination: '解雇',
+    contractExpiry: '合同到期',
+    cancel: '取消',
 
     // Add Employee Wizard
     stepBasicInfo: '员工信息',
     stepContract: '完善合同',
     stepBank: '银行卡信息',
+    stepSalaryBank: '薪资与银行',
     personalDetails: '个人信息',
     employmentDetails: '雇佣信息',
     firstName: '名',
@@ -413,7 +534,7 @@ export const translations = {
     jobTitle: '职位',
     department: '部门',
     tags: '标签',
-    tagsPlaceholder: '例如：远程, 技术部, 资深 (逗号分隔)',
+    tagsPlaceholder: '例如：远程, 技术部, 資深 (逗号分隔)',
     employmentType: '雇佣类型',
     startDate: '入职日期',
     contractTerm: '合同期限',
@@ -442,6 +563,18 @@ export const translations = {
     contractBetween: '雇佣合同签约方：',
     and: '与',
     contractDate: '签约日期',
+
+    // Tags
+    tagsOverview: '使用自定义标签和群组来组织您的员工队伍。',
+    createTag: '创建标签',
+    editTag: '编辑标签',
+    tagName: '标签名称',
+    tagColor: '标签颜色',
+    tagDesc: '描述',
+    tagMembers: '成员',
+    taggedEmployees: '属于该标签的员工',
+    noTagsFound: '未找到标签',
+    deleteTagConfirm: '确定要删除此标签吗？此操作无法撤销。',
 
     reviewPayroll: '审核并批准所有实体的薪酬运行。',
     reportCenter: '报表中心',
@@ -629,14 +762,16 @@ export const translations = {
     refresh: '刷新',
     edit: '修改',
 
-    copilotWelcome: '您好！我是 PayDD 合规助手。您可以向我咨询有关劳动法、薪酬法规或在新国家招聘的问题。',
+    copilotWelcome: '您好！我是 PayDD 合規助手。您可以向我咨询有关劳动法、薪酬法规或在新国家招聘的问题。',
     copilotPlaceholder: '询问合规性、稅收...',
     aiDisclaimer: 'AI 可能会犯错。请核实关键合规信息。',
     copilotTitle: 'PayDD 助手',
 
     search: '搜索...',
+    headerSlogan: '全球薪酬与合规平台',
   },
   'zh-TW': {
+    // ... existing translations ...
     groupEnterprise: '企業管理',
     groupWorkforce: '員工管理',
     groupFinancials: '財務服務',
@@ -657,6 +792,43 @@ export const translations = {
     
     securitySettings: '安全設置',
     logout: '登出',
+    
+    // Expenses
+    expensesOverview: '管理員工報銷和費用申請。',
+    newExpense: '新增報銷',
+    totalReimbursed: '已報銷總額',
+    totalReimbursedCount: '已報銷總筆數',
+    pendingApproval: '待審批',
+    batchId: '批次 ID',
+    totalItems: '條目數',
+    totalAmount: '總金額',
+    
+    // Expense Wizard
+    stepAddItems: '1. 添加費用',
+    stepReviewExpenses: '2. 確認批次',
+    stepPayExpenses: '3. 支付',
+
+    expenseCategory: '費用類型',
+    expenseDate: '發生日期',
+    expenseDesc: '費用描述',
+    expenseAmount: '金額',
+    expenseCurrency: '幣種',
+    expenseAttachment: '憑證 / 附件',
+    uploadReceipt: '上傳憑證',
+    dragDrop: '拖拽或點擊上傳文件',
+    addItem: '添加費用',
+    noItemsAdded: '暫無費用條目。',
+    selectBankAccount: '選擇收款賬戶',
+    searchEmployee: '搜索員工...',
+    exchangeRateDisplay: '參考匯率',
+    convertedAmount: '折算金額',
+
+    catTravel: '差旅交通',
+    catMeals: '餐飲',
+    catAccommodation: '住宿',
+    catOffice: '辦公用品',
+    catTraining: '培訓',
+    catOther: '其他',
 
     // Login Page
     loginTitle: '登錄 PayDD',
@@ -706,11 +878,27 @@ export const translations = {
     salary: '薪資',
     actions: '操作',
     monthlyGross: '月度總額',
+    typeRegular: '正式員工',
+    typeContractor: '靈活用工',
+    salaryAmount: '薪資金額',
+
+    // Employee Actions
+    offboard: '離職',
+    employeeDetails: '員工詳情',
+    offboardingWizard: '離職辦理',
+    lastWorkingDay: '最後工作日',
+    reasonForLeaving: '離職原因',
+    confirmOffboard: '確認離職',
+    resignation: '主動辭職',
+    termination: '解雇',
+    contractExpiry: '合同到期',
+    cancel: '取消',
 
     // Add Employee Wizard
     stepBasicInfo: '員工信息',
     stepContract: '完善合同',
     stepBank: '銀行卡信息',
+    stepSalaryBank: '薪資與銀行',
     personalDetails: '個人信息',
     employmentDetails: '僱傭信息',
     firstName: '名',
@@ -754,6 +942,18 @@ export const translations = {
     contractBetween: '僱傭合約簽約方：',
     and: '與',
     contractDate: '簽約日期',
+
+    // Tags
+    tagsOverview: '使用自定義標籤和群組來組織您的員工隊伍。',
+    createTag: '創建標籤',
+    editTag: '編輯標籤',
+    tagName: '標籤名稱',
+    tagColor: '標籤顏色',
+    tagDesc: '描述',
+    tagMembers: '成員',
+    taggedEmployees: '屬於該標籤的員工',
+    noTagsFound: '未找到標籤',
+    deleteTagConfirm: '確定要刪除此標籤嗎？此操作無法撤銷。',
 
     reviewPayroll: '審核並批准所有實體的薪酬運行。',
     reportCenter: '報表中心',
@@ -947,8 +1147,10 @@ export const translations = {
     copilotTitle: 'PayDD 助手',
 
     search: '搜索...',
+    headerSlogan: '全球薪酬與合規平台',
   },
   'ru': {
+    // ... existing translations ...
     groupEnterprise: 'Управление компанией',
     groupWorkforce: 'Управление персоналом',
     groupFinancials: 'Финансы',
@@ -969,6 +1171,43 @@ export const translations = {
     
     securitySettings: 'Настройки безопасности',
     logout: 'Выйти',
+    
+    // Expenses
+    expensesOverview: 'Управление расходами и возмещениями.',
+    newExpense: 'Новая заявка',
+    totalReimbursed: 'Всего выплачено',
+    totalReimbursedCount: 'Всего заявок',
+    pendingApproval: 'Ожидает одобрения',
+    batchId: 'ID партии',
+    totalItems: 'Позиции',
+    totalAmount: 'Сумма',
+    
+    // Expense Wizard
+    stepAddItems: '1. Добавить расходы',
+    stepReviewExpenses: '2. Проверка',
+    stepPayExpenses: '3. Оплата',
+    
+    expenseCategory: 'Категория',
+    expenseDate: 'Дата',
+    expenseDesc: 'Описание',
+    expenseAmount: 'Сумма',
+    expenseCurrency: 'Валюта',
+    expenseAttachment: 'Чек / Вложение',
+    uploadReceipt: 'Загрузить чек',
+    dragDrop: 'Перетащите файл или нажмите для загрузки',
+    addItem: 'Добавить',
+    noItemsAdded: 'Позиции пока не добавлены.',
+    selectBankAccount: 'Выберите счет',
+    searchEmployee: 'Поиск сотрудника...',
+    exchangeRateDisplay: 'Курс обмена',
+    convertedAmount: 'В USD',
+
+    catTravel: 'Командировка',
+    catMeals: 'Питание',
+    catAccommodation: 'Проживание',
+    catOffice: 'Офис',
+    catTraining: 'Обучение',
+    catOther: 'Другое',
 
     // Login Page
     loginTitle: 'Войти в PayDD',
@@ -1018,11 +1257,27 @@ export const translations = {
     salary: 'Зарплата',
     actions: 'Действия',
     monthlyGross: 'Ежемесячный доход',
+    typeRegular: 'Штатный сотрудник',
+    typeContractor: 'Подрядчик',
+    salaryAmount: 'Сумма зарплаты',
+
+    // Employee Actions
+    offboard: 'Уволить',
+    employeeDetails: 'Детали сотрудника',
+    offboardingWizard: 'Мастер увольнения',
+    lastWorkingDay: 'Последний рабочий день',
+    reasonForLeaving: 'Причина ухода',
+    confirmOffboard: 'Подтвердить увольнение',
+    resignation: 'Увольнение по собственному',
+    termination: 'Расторжение контракта',
+    contractExpiry: 'Окончание контракта',
+    cancel: 'Отмена',
 
     // Add Employee Wizard
     stepBasicInfo: 'Инфо',
     stepContract: 'Контракт',
     stepBank: 'Банк',
+    stepSalaryBank: 'Зарплата и Банк',
     personalDetails: 'Личные данные',
     employmentDetails: 'Служебные данные',
     firstName: 'Имя',
@@ -1066,6 +1321,18 @@ export const translations = {
     contractBetween: 'Трудовой договор между',
     and: 'и',
     contractDate: 'Дата контракта',
+    
+    // Tags
+    tagsOverview: 'Организуйте персонал с помощью пользовательских тегов и групп.',
+    createTag: 'Создать тег',
+    editTag: 'Изменить тег',
+    tagName: 'Название тега',
+    tagColor: 'Цвет тега',
+    tagDesc: 'Описание',
+    tagMembers: 'Участники',
+    taggedEmployees: 'Сотрудники с тегом',
+    noTagsFound: 'Теги не найдены',
+    deleteTagConfirm: 'Вы уверены, что хотите удалить этот тег? Это действие нельзя отменить.',
 
     reviewPayroll: 'Проверка и утверждение выплат по всем юрлицам.',
     reportCenter: 'Отчеты',
@@ -1259,6 +1526,7 @@ export const translations = {
     copilotTitle: 'PayDD Помощник',
 
     search: 'Поиск...',
+    headerSlogan: 'Глобальная платформа для расчета заработной платы',
   }
 };
 

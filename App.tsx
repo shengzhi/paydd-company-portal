@@ -1,10 +1,13 @@
 
+
 import React from 'react';
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Dashboard from './pages/Dashboard';
 import Employees from './pages/Employees';
+import Tags from './pages/Tags';
 import Payroll from './pages/Payroll';
+import Expenses from './pages/Expenses'; // New Import
 import CompanyInfo from './pages/CompanyInfo';
 import Wallet from './pages/Wallet';
 import Login from './pages/Login';
@@ -24,13 +27,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         {/* Top Navigation Bar */}
         <header className="sticky top-0 z-10 bg-white/80 backdrop-blur-md border-b border-slate-200 px-8 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4 w-96">
-            <div className="relative w-full">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-              <input 
-                type="text" 
-                placeholder={t('search')} 
-                className="w-full pl-10 pr-4 py-2 bg-slate-100 border-none rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm transition-all"
-              />
+            <div className="text-slate-500 font-medium italic text-lg tracking-tight">
+               {t('headerSlogan')}
             </div>
           </div>
           <div className="flex items-center gap-4">
@@ -95,13 +93,13 @@ const AuthenticatedApp = () => {
         
         {/* Workforce Group */}
         <Route path="/employees" element={<Employees />} />
-        <Route path="/tags" element={<ComingSoon title="Team Tags" />} />
+        <Route path="/tags" element={<Tags />} />
         <Route path="/emp-contracts" element={<ComingSoon title="Employee Contracts" />} />
         
         {/* Financials Group */}
         <Route path="/wallet" element={<Wallet />} />
         <Route path="/payroll" element={<Payroll />} />
-        <Route path="/expenses" element={<ComingSoon title="Reimbursements" />} />
+        <Route path="/expenses" element={<Expenses />} />
         <Route path="/social-security" element={<ComingSoon title="Social Security" />} />
         
         {/* System Group */}
