@@ -1,5 +1,4 @@
 
-
 export enum EmployeeStatus {
   ACTIVE = 'Active',
   ONBOARDING = 'Onboarding',
@@ -74,6 +73,8 @@ export interface ExpenseItem {
   attachment?: string; // Mock URL
   exchangeRate: number; // Rate at time of entry
   amountUSD: number;
+  batchId?: string;
+  status?: string;
 }
 
 export interface ExpenseBatch {
