@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Shareholder } from '../types';
@@ -217,7 +218,7 @@ const CompanyInfo: React.FC = () => {
                          </div>
                       </div>
                       <div className="space-y-1.5">
-                         <label className="text-sm font-medium text-slate-700"><span className="text-red-500 mr-1">*</span>{t('businessScope')}</label>
+                         <label className="text-sm font-medium text-slate-700"><span className="text-red-500 mr-1">*</span>{t('entBusinessScope')}</label>
                          <select className="form-select" value={formData.scope} onChange={e => setFormData({...formData, scope: e.target.value})}>
                             <option value="Business">Business</option>
                             <option value="Technology">Technology</option>

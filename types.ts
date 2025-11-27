@@ -111,3 +111,14 @@ export interface Shareholder {
   mobile: string;
   email: string;
 }
+
+export interface EnterpriseContract {
+  id: string;
+  title: string;
+  type: 'MSA' | 'NDA' | 'DPA' | 'SOW' | 'Other';
+  status: 'Active' | 'Pending Signature' | 'Expired' | 'Draft';
+  startDate: string;
+  endDate?: string;
+  signedBy?: string;
+  fileUrl?: string;
+}

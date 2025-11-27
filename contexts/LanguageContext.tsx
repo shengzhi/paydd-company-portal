@@ -6,7 +6,6 @@ export type Language = 'en' | 'zh-CN' | 'zh-TW' | 'ru';
 
 export const translations = {
   en: {
-    // ... existing translations ...
     groupEnterprise: 'Enterprise',
     groupWorkforce: 'Workforce',
     groupFinancials: 'Financials',
@@ -28,6 +27,38 @@ export const translations = {
     
     securitySettings: 'Security Settings',
     logout: 'Log out',
+    
+    // Enterprise Contracts
+    contractsOverview: 'Manage your master service agreements and legal documents.',
+    contractsActive: 'Active Contracts',
+    contractsPending: 'Pending Signature',
+    contractsExpiring: 'Expiring Soon',
+    contractName: 'Contract Name',
+    contractType: 'Type',
+    effectiveDate: 'Effective Date',
+    contractStatus: 'Status',
+    contractActions: 'Actions',
+    signContract: 'Sign Contract',
+    downloadPdf: 'Download PDF',
+    viewContract: 'View Contract',
+    signedOn: 'Signed on',
+    contractId: 'Contract ID',
+    
+    typeMSA: 'Master Services Agreement',
+    typeNDA: 'Non-Disclosure Agreement',
+    typeDPA: 'Data Processing Agreement',
+    typeSOW: 'Statement of Work',
+    statusActive: 'Active',
+    statusPending: 'Pending Signature',
+    statusExpired: 'Expired',
+    statusDraft: 'Draft',
+    
+    signModalTitle: 'Sign Document',
+    signModalDesc: 'Please review and sign the document electronically.',
+    legalName: 'Legal Name',
+    drawSignature: 'Draw Signature',
+    adoptAndSign: 'Adopt & Sign',
+    uploadContract: 'Upload Contract',
     
     // Expenses
     expensesOverview: 'Manage employee reimbursements and claims.',
@@ -240,7 +271,6 @@ export const translations = {
     draftDesc: 'Your changes have been saved locally.',
     
     // Payroll Pagination & Filters
-    // department: 'Department', // Duplicate
     allDepartments: 'All Departments',
     allCountries: 'All Countries',
     clearSelection: 'Clear Selection',
@@ -271,7 +301,7 @@ export const translations = {
     // Payment Page
     paymentCheckout: 'Checkout',
     selectPaymentCurrency: 'Select Payment Currency',
-    // paymentMethod: 'Payment Method', // Duplicate
+    checkoutPaymentMethod: 'Payment Method',
     walletBalance: 'Wallet Balance',
     cryptoPayment: 'Crypto Payment',
     bankTransfer: 'Bank Transfer',
@@ -351,7 +381,7 @@ export const translations = {
     companySize: 'Company Size',
     regAddress: 'Registered Address',
     regCapital: 'Registered Capital',
-    businessScope: 'Business Scope',
+    entBusinessScope: 'Business Scope',
     
     website: 'Website',
     contactPerson: 'Contact Person',
@@ -392,7 +422,6 @@ export const translations = {
     headerSlogan: 'Global Payroll & Compliance Platform',
   },
   'zh-CN': {
-    // ... existing translations ...
     groupEnterprise: '企业管理',
     groupWorkforce: '员工管理',
     groupFinancials: '财务服务',
@@ -414,6 +443,38 @@ export const translations = {
     securitySettings: '安全设置',
     logout: '退出登录',
     
+    // Enterprise Contracts
+    contractsOverview: '管理您的主服务协议和法律文件。',
+    contractsActive: '生效中',
+    contractsPending: '待签署',
+    contractsExpiring: '即将过期',
+    contractName: '合同名称',
+    contractType: '类型',
+    effectiveDate: '生效日期',
+    contractStatus: '状态',
+    contractActions: '操作',
+    signContract: '签署合同',
+    downloadPdf: '下载 PDF',
+    viewContract: '查看合同',
+    signedOn: '签署于',
+    contractId: '合同编号',
+    
+    typeMSA: '主服务协议 (MSA)',
+    typeNDA: '保密协议 (NDA)',
+    typeDPA: '数据处理协议 (DPA)',
+    typeSOW: '工作说明书 (SOW)',
+    statusActive: '生效中',
+    statusPending: '待签署',
+    statusExpired: '已过期',
+    statusDraft: '草稿',
+    
+    signModalTitle: '签署文件',
+    signModalDesc: '请查阅并电子签署文件。',
+    legalName: '法定姓名',
+    drawSignature: '绘制签名',
+    adoptAndSign: '确认并签署',
+    uploadContract: '上传合同',
+
     // Expenses
     expensesOverview: '管理员工报销和费用申请。',
     newExpense: '新增报销',
@@ -622,7 +683,6 @@ export const translations = {
     draftDesc: '您的发薪信息已保存至本地。',
     
     // Payroll Pagination & Filters
-    // department: '部门', // Duplicate
     allDepartments: '所有部门',
     allCountries: '所有国家',
     clearSelection: '清空选择',
@@ -653,7 +713,7 @@ export const translations = {
     // Payment Page
     paymentCheckout: '收银台',
     selectPaymentCurrency: '选择支付币种',
-    // paymentMethod: '支付方式', // Duplicate
+    checkoutPaymentMethod: '支付方式',
     walletBalance: '钱包余额',
     cryptoPayment: '加密货币支付',
     bankTransfer: '银行转账',
@@ -732,7 +792,7 @@ export const translations = {
     companySize: '企业规模',
     regAddress: '注册地址',
     regCapital: '注册资金',
-    businessScope: '业务范围',
+    entBusinessScope: '业务范围',
     
     website: '公司网站',
     contactPerson: '联系人',
@@ -762,8 +822,8 @@ export const translations = {
     refresh: '刷新',
     edit: '修改',
 
-    copilotWelcome: '您好！我是 PayDD 合規助手。您可以向我咨询有关劳动法、薪酬法规或在新国家招聘的问题。',
-    copilotPlaceholder: '询问合规性、稅收...',
+    copilotWelcome: '您好！我是 PayDD 合规助手。您可以向我咨询有关劳动法、薪酬法规或在新国家招聘的问题。',
+    copilotPlaceholder: '询问合规性、税收...',
     aiDisclaimer: 'AI 可能会犯错。请核实关键合规信息。',
     copilotTitle: 'PayDD 助手',
 
@@ -771,7 +831,6 @@ export const translations = {
     headerSlogan: '全球薪酬与合规平台',
   },
   'zh-TW': {
-    // ... existing translations ...
     groupEnterprise: '企業管理',
     groupWorkforce: '員工管理',
     groupFinancials: '財務服務',
@@ -793,6 +852,38 @@ export const translations = {
     securitySettings: '安全設置',
     logout: '登出',
     
+    // Enterprise Contracts
+    contractsOverview: '管理您的主服務協議和法律文件。',
+    contractsActive: '生效中',
+    contractsPending: '待簽署',
+    contractsExpiring: '即將過期',
+    contractName: '合同名稱',
+    contractType: '類型',
+    effectiveDate: '生效日期',
+    contractStatus: '狀態',
+    contractActions: '操作',
+    signContract: '簽署合同',
+    downloadPdf: '下載 PDF',
+    viewContract: '查看合同',
+    signedOn: '簽署於',
+    contractId: '合同編號',
+    
+    typeMSA: '主服務協議 (MSA)',
+    typeNDA: '保密協議 (NDA)',
+    typeDPA: '數據處理協議 (DPA)',
+    typeSOW: '工作說明書 (SOW)',
+    statusActive: '生效中',
+    statusPending: '待簽署',
+    statusExpired: '已過期',
+    statusDraft: '草稿',
+    
+    signModalTitle: '簽署文件',
+    signModalDesc: '請查閱並電子簽署文件。',
+    legalName: '法定姓名',
+    drawSignature: '繪製簽名',
+    adoptAndSign: '確認並簽署',
+    uploadContract: '上傳合同',
+
     // Expenses
     expensesOverview: '管理員工報銷和費用申請。',
     newExpense: '新增報銷',
@@ -1001,7 +1092,6 @@ export const translations = {
     draftDesc: '您的發薪信息已保存至本地。',
     
     // Payroll Pagination & Filters
-    // department: '部門', // Duplicate
     allDepartments: '所有部門',
     allCountries: '所有國家',
     clearSelection: '清空選擇',
@@ -1032,7 +1122,7 @@ export const translations = {
     // Payment Page
     paymentCheckout: '收銀台',
     selectPaymentCurrency: '選擇支付幣種',
-    // paymentMethod: '支付方式', // Duplicate
+    checkoutPaymentMethod: '支付方式',
     walletBalance: '錢包餘額',
     cryptoPayment: '加密貨幣支付',
     bankTransfer: '銀行轉賬',
@@ -1111,7 +1201,7 @@ export const translations = {
     companySize: '企業規模',
     regAddress: '註冊地址',
     regCapital: '註冊資金',
-    businessScope: '業務範圍',
+    entBusinessScope: '業務範圍',
     
     website: '公司網站',
     contactPerson: '聯繫人',
@@ -1150,7 +1240,6 @@ export const translations = {
     headerSlogan: '全球薪酬與合規平台',
   },
   'ru': {
-    // ... existing translations ...
     groupEnterprise: 'Управление компанией',
     groupWorkforce: 'Управление персоналом',
     groupFinancials: 'Финансы',
@@ -1172,6 +1261,38 @@ export const translations = {
     securitySettings: 'Настройки безопасности',
     logout: 'Выйти',
     
+    // Enterprise Contracts
+    contractsOverview: 'Управление соглашениями об обслуживании и юридическими документами.',
+    contractsActive: 'Активные договоры',
+    contractsPending: 'Ожидают подписи',
+    contractsExpiring: 'Истекают скоро',
+    contractName: 'Название договора',
+    contractType: 'Тип',
+    effectiveDate: 'Дата вступления',
+    contractStatus: 'Статус',
+    contractActions: 'Действия',
+    signContract: 'Подписать договор',
+    downloadPdf: 'Скачать PDF',
+    viewContract: 'Просмотр',
+    signedOn: 'Подписано',
+    contractId: 'ID договора',
+    
+    typeMSA: 'Генеральное соглашение (MSA)',
+    typeNDA: 'Соглашение о неразглашении (NDA)',
+    typeDPA: 'Соглашение об обработке данных (DPA)',
+    typeSOW: 'Техническое задание (SOW)',
+    statusActive: 'Активен',
+    statusPending: 'Ожидает подписи',
+    statusExpired: 'Истек',
+    statusDraft: 'Черновик',
+    
+    signModalTitle: 'Подписание документа',
+    signModalDesc: 'Пожалуйста, ознакомьтесь и подпишите документ.',
+    legalName: 'Юридическое имя',
+    drawSignature: 'Нарисовать подпись',
+    adoptAndSign: 'Принять и подписать',
+    uploadContract: 'Загрузить договор',
+
     // Expenses
     expensesOverview: 'Управление расходами и возмещениями.',
     newExpense: 'Новая заявка',
@@ -1380,7 +1501,6 @@ export const translations = {
     draftDesc: 'Изменения сохранены локально.',
 
     // Payroll Pagination & Filters
-    // department: 'Отдел', // Duplicate
     allDepartments: 'Все отделы',
     allCountries: 'Все страны',
     clearSelection: 'Очистить выбор',
@@ -1411,7 +1531,7 @@ export const translations = {
     // Payment Page
     paymentCheckout: 'Касса',
     selectPaymentCurrency: 'Выберите валюту',
-    // paymentMethod: 'Способ оплаты', // Duplicate
+    checkoutPaymentMethod: 'Способ оплаты',
     walletBalance: 'Баланс кошелька',
     cryptoPayment: 'Криптовалюта',
     bankTransfer: 'Банковский перевод',
@@ -1490,7 +1610,7 @@ export const translations = {
     companySize: 'Размер компании',
     regAddress: 'Юридический адрес',
     regCapital: 'Уставной капитал',
-    businessScope: 'Сфера деятельности',
+    entBusinessScope: 'Сфера деятельности',
     
     website: 'Веб-сайт',
     contactPerson: 'Контактное лицо',
@@ -1549,7 +1669,6 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
         text = text.replace(`{{${k}}}`, String(v));
       });
     }
-    
     return text;
   };
 

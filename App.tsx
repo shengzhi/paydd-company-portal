@@ -7,8 +7,9 @@ import Dashboard from './pages/Dashboard';
 import Employees from './pages/Employees';
 import Tags from './pages/Tags';
 import Payroll from './pages/Payroll';
-import Expenses from './pages/Expenses'; // New Import
+import Expenses from './pages/Expenses'; 
 import CompanyInfo from './pages/CompanyInfo';
+import Contracts from './pages/Contracts'; // New Import
 import Wallet from './pages/Wallet';
 import Login from './pages/Login';
 import AICopilot from './components/AICopilot';
@@ -89,7 +90,7 @@ const AuthenticatedApp = () => {
         
         {/* Enterprise Group */}
         <Route path="/company" element={<CompanyInfo />} />
-        <Route path="/contracts" element={<ComingSoon title="Enterprise Contracts" />} />
+        <Route path="/contracts" element={<Contracts />} />
         
         {/* Workforce Group */}
         <Route path="/employees" element={<Employees />} />
