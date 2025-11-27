@@ -162,8 +162,8 @@ const CompanyInfo: React.FC = () => {
                            key={section.id}
                            onClick={() => setActiveTab(section.id as any)}
                            className={`w-full text-left p-3 rounded-lg flex items-start gap-3 transition-all ${isActive
-                                 ? 'bg-indigo-50 text-indigo-700 border border-indigo-100 shadow-sm'
-                                 : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                              ? 'bg-indigo-50 text-indigo-700 border border-indigo-100 shadow-sm'
+                              : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
                               }`}
                         >
                            <Icon className={`w-5 h-5 mt-0.5 ${isActive ? 'text-indigo-600' : 'text-slate-400'}`} />

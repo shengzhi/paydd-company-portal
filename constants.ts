@@ -1,6 +1,6 @@
 
 
-import { Employee, EmployeeStatus, PayrollRun, PayrollStatus, ChartData, Tag, ExpenseBatch } from './types';
+import { Employee, EmployeeStatus, PayrollRun, PayrollStatus, ChartData, Tag, ExpenseBatch, EnterpriseContract } from './types';
 
 // Centralized Exchange Rates
 export const SHARED_EXCHANGE_RATES: Record<string, number> = {
@@ -225,6 +225,40 @@ export const MOCK_EXPENSE_BATCHES: ExpenseBatch[] = [
     totalAmountUSD: 3400.00,
     status: 'Processing',
     items: []
+  }
+];
+
+export const MOCK_ENTERPRISE_CONTRACTS: EnterpriseContract[] = [
+  {
+    id: 'CTR-001',
+    title: 'Master Services Agreement (Global)',
+    type: 'MSA',
+    status: 'Active',
+    startDate: '2023-01-01',
+    signedBy: 'Alex Morgan',
+  },
+  {
+    id: 'CTR-002',
+    title: 'Data Processing Agreement (GDPR)',
+    type: 'DPA',
+    status: 'Active',
+    startDate: '2023-01-01',
+    signedBy: 'Alex Morgan',
+  },
+  {
+    id: 'CTR-003',
+    title: 'Non-Disclosure Agreement',
+    type: 'NDA',
+    status: 'Active',
+    startDate: '2022-12-15',
+    signedBy: 'Alex Morgan',
+  },
+  {
+    id: 'CTR-004',
+    title: 'Statement of Work: UK Expansion',
+    type: 'SOW',
+    status: 'Pending Signature',
+    startDate: '2023-11-01',
   }
 ];
 
